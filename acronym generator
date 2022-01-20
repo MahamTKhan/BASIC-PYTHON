@@ -1,0 +1,6 @@
+given=input("enter a phrase:")
+phrase=given.split()
+acronym=""
+for word in phrase:
+    acronym=acronym+word[0].upper()
+print("the acronym of",given,"is",acronym)
