@@ -1,0 +1,91 @@
+import math
+from tkinter import *
+m=Tk()
+l1=Label(m,bg="pink",fg="black",width=13,font=("aeriel",10),text="enter first no").grid(row=0,column=0)
+l2=Label(m,bg="pink",fg="black",width=13,font=("aeriel",10),text="enter second no").grid(row=1,column=0)
+
+e1=Entry(m,bg="light green",fg="black",width=15)
+e1.grid(row=0,column=1)
+e2=Entry(m,bg="light green",fg="black",width=15)
+e2.grid(row=0,column=2)
+
+def fact():
+    x=int(e1.get())
+    fact=1
+    for i in range(1,x+1):
+        fact=fact*i
+    Label(m,bg="pink",fg="black",width=13,font=("aeriel",10),text="the factorial is"+str(fact)).grid(row=3,column=1)
+
+def table():
+    tno=int(e1.get())
+    trange=int(e2.get())
+    for i in range(1,trange+1):
+        z=tno,"*",i,"=",tno*i
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10),text=str(z)).grid(row=4,column=1)
+
+def sum():
+    n1=int(e1.get())
+    n2=int(e2.get())
+    sum=n1+n2
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=sum).grid(row=5, column=1)
+
+def sub():
+    n1=int(e1.get())
+    n2=int(e2.get())
+    sub=n1-n2
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=sub).grid(row=6, column=1)
+
+def mult():
+    n1 = int(e1.get())
+    n2 = int(e2.get())
+    mul = n1 * n2
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=mul).grid(row=7, column=1)
+
+def divide():
+    n1 = int(e1.get())
+    n2 = int(e2.get())
+    div = n1 / n2
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=div).grid(row=8, column=1)
+
+def sqrt():
+    n1 = int(e1.get())
+    sqrt=math.sqrt(n1)
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=sqrt).grid(row=9, column=1)
+
+def sin():
+    n1 = int(e1.get())
+    sin = math.sin(n1)
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=sin).grid(row=10, column=1)
+
+def cos():
+    n1 = int(e1.get())
+    cos = math.cos(n1)
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=cos).grid(row=11, column=1)
+
+def tan():
+    n1 = int(e1.get())
+    tan = math.tan(n1)
+    Label(m, bg="pink", fg="black", width=13, font=("aeriel", 10), text=tan).grid(row=12, column=1)
+
+b1=Button(m,bg="light green",fg="black", width=10,height=4,text="fact",command=fact)
+b1.grid(row=3, column=2)
+b2=Button(m,bg="light blue",fg="black", width=10,height=4,text="table",command=table)
+b2.grid(row=4, column=2)
+b3=Button(m,bg="light pink",fg="black", width=10,height=4,text="sum",command=sum)
+b3.grid(row=5, column=2)
+b4=Button(m,bg="light green",fg="black", width=10,height=4,text="sub",command=sub)
+b4.grid(row=6, column=2)
+b5=Button(m,bg="light blue",fg="black", width=10,height=4,text="mul",command=mult)
+b5.grid(row=7, column=2)
+b6=Button(m,bg="light pink",fg="black", width=10,height=4,text="div",command=divide)
+b6.grid(row=8, column=2)
+b7=Button(m,bg="light green",fg="black", width=10,height=4,text="sqrt",command=sqrt)
+b7.grid(row=9, column=2)
+b8=Button(m,bg="light blue",fg="black", width=10,height=4,text="sin",command=sin)
+b8.grid(row=10, column=2)
+b9=Button(m,bg="light pink",fg="black", width=10,height=4,text="cos",command=cos)
+b9.grid(row=11, column=2)
+b10=Button(m,bg="light green",fg="black", width=10,height=4,text="tan",command=tan)
+b10.grid(row=12, column=2)
+
+m.mainloop()
