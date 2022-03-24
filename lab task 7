@@ -1,0 +1,82 @@
+#ques1
+sample=[(2,3),(4,7),(8,11),(3,6)]
+x=max(sample)
+y=min(sample)
+print("the maximum value is",x)
+print("the minimum value is",y)
+
+#ques 2
+import math
+for i in range(4):
+    x=int(input("enter x co-ordinate:"))
+    y=int(input("enter y co-ordinate:"))
+    print(x,y)
+    z=math.sqrt(x**2+y**2)
+    if z<10:
+        print(True)
+    else:
+        print(False)
+
+#ques 3
+#part a
+a=("anachronistically")
+b=("counterintuitive")
+x=len(a)
+y=len(b)
+print("the no of characters in",a,"is",x-y,"mmore than",b)
+
+#part b
+if "misinterpretation"<"misrepresentation":
+    print("it appears to be earlier in dictionary")
+else:
+    print("it appears later in dictionary")
+
+#part c
+a=("floccinaucinihilipilification")
+x=tuple(list(a))
+if "e" in x:
+    print("the letter 'e' appears in floccinaucinihilipilification ")
+else:
+    print("the letter 'e' doesnt appears in floccinaucinihilipilification ")
+
+#part d
+a=("counterrevolution")
+b=("counter")
+c=("resolution")
+if len(a)==len(b)+len(c):
+    print("the number of characters in",a,"is equal to the sum of the no of characters in",b,"and",c)
+else:
+    print("the number of characters in", a, "is not equal to the sum of the no of characters in", b, "and", c)
+
+#ques 4
+t=tuple()
+a=list(t)
+num=int(input("enter the no of provinces of pakistan:"))
+for i in range(num):
+    b=input("enter the name of province")
+    a.append(b)
+c=tuple(a)
+print(c)
+
+
+#ques 5
+months_l=['jan','feb','mar','may']
+months_l.insert(3,'apr')
+print(months_l)
+months_l.append('jun')
+print(months_l)
+months_l.pop()
+print(months_l)
+months_l.remove('feb')
+print(months_l)
+
+#when attempting these on tuple
+months_l=('jan','feb','mar','may')
+months_l.insert(3,'apr')
+print(months_l)
+months_l.append('jun')
+print(months_l)
+months_l.pop()
+print(months_l)
+months_l.remove('feb')
+print(months_l)
