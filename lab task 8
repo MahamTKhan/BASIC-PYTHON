@@ -1,0 +1,78 @@
+#ques1
+#part a
+import time
+print(time.strftime('%A<%B<%d,%Y'))
+#part b
+print(time.strftime('%I:%M %p %Z on %B/%d/%y'))
+#part c
+print(time.strftime('I will meet you on %a %b %d at %I:%M %p'))
+
+#ques 2
+forecast="it will be a sunny day today"
+count=forecast.count("day")
+print("the number of occurences of day is",count)
+
+weather=forecast.find("sunny")
+print("the index of sunny is",weather)
+          #OR
+weather=forecast.index("sunny")
+print("the index of sunny is",weather)
+
+change=forecast.replace("sunny","cloudy")
+print("the string forecast after the replacement of sunny to cloudy is",change)
+
+#ques 3
+def even(n):
+    print("the numbers divisible by 2 and 3 until the range",n," are :")
+    for i in range(1,n+1):
+        if i%2==0:
+            print(i,end="")
+        elif i%3==0:
+            print(i, end="")
+
+n=int(input("enter a number"))
+even(n)
+print()
+
+#ques 4
+first='John'
+last='Doe'
+street='main street'
+number='B-224'
+city='Houston'
+state='US'
+zipcode='89876'
+
+print(first+" "+last)
+print(number+" "+street+" "+city,state+" "+zipcode)
+
+#ques 5
+#part a
+message="the secret of this message is that it is secret."
+#part b
+length=(len(message))
+print(length)
+#part c
+count=message.count("secret")
+print(count)
+#part d
+censored=message.replace("secret","xxxxxx")
+print(censored)
+
+#ques 6
+def month(s):
+    months=("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec").split()
+    return(months[s-1])
+n=int(input("enter no between 1 to 12:"))
+print("the month is:",month(n))
+
+#ques 7
+def cheer(n):
+    print("How do you spell \n winner? I know I know!")
+    for i in n:
+        print(i.upper(),end="",)
+    print("!")
+    print()
+    print("And thats how you spell Winner!\n60",n.title,"!")
+tname=(input("enter a team name:"))
+cheer(tname)
