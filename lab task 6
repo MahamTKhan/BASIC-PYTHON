@@ -1,0 +1,84 @@
++lst=[-1,2,-3,4,5,6,0,8,10]
+#part (a)
+if len(lst)%2==0:
+    x=len(lst)/2
+    print("the middle term is",x)
+    print("the index of the middle element is")
+    print(lst.index(x))
+else:
+    y=int(len(lst)/2+2)
+    print("the middle term is",y)
+    print("the index of the middle element is")
+    print(lst.index(y))
+#part c
+lst=[-1,-3,4,5,6,8,10]
+lst.sort(reverse=True)
+print(lst)
+
+
+#part d
+lst=[-1,2,-3,4,5,6,0,8,5,10]
+print(lst)
+x=lst.pop(0)
+lst.append(x)
+print(lst)
+
+
+
+
+#ques 6 part a
+a=6
+b=7
+c=(a+b)/2
+print("the average of a and b is",c)
+
+#part b
+inventory=['paper','staples','pencils']
+print(inventory)
+
+#part c
+first='john'
+middle='fitzgerald'
+last='kennedy'
+
+#part d
+fullname=first+middle+last
+print(fullname)
+#ques 4
+monthsL=['jan','feb','march','may']
+monthsT=('jan','feb','march','may')
+#part a
+monthsL.insert(3,'april')
+print(monthsL)
+monthsT.insert(3,'april')
+print(monthsT)
+
+#part b
+monthsL.append('june')
+print(monthsL)
+monthsT.append('june')
+print(monthsT)
+
+#part c
+monthsL.pop()
+print(monthsL)
+monthsT.pop()
+print(monthsT)
+
+#part d
+monthsL.pop(1)
+print(monthsL)
+monthsT.pop(1)
+print(monthsT)
+
+#part e
+monthsL.reverse()
+print(monthsL)
+monthsT.reverse()
+print(monthsT)
+
+#part f
+monthsL.sort()
+print(monthsL)
+monthsT.sort()
+print(monthsT)
