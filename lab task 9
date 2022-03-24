@@ -1,0 +1,89 @@
+#ques 1
+mybeststudents=("maham","sara","marium","fizza","amna")
+s1=set()
+for x in mybeststudents:
+    s1.add(x)
+    print(s1)
+
+#ques 2
+friendsinNED={"maham","abiha","sara","sara","meerub","hamna"}
+print(friendsinNED)
+friendsinNED.remove("sara")
+friendsinNED.remove("abiha")
+print(friendsinNED)
+
+#ques 3
+mybestdishes=set()
+mybestdishes.add('alfredo pasta')
+mybestdishes.add('omelate')
+mybestdishes.add('pizza')
+mybestdishes.add('alfredo pasta')
+mybestdishes.add('pancakes')
+print(mybestdishes)
+for i in range(len(mybestdishes)):
+    x=mybestdishes.pop()
+    print(mybestdishes)
+
+#ques 4
+iteminstore={"chocolates","juice","bread","butter","chips"}
+purchased=set()
+price=list()
+n=int(input("enter number of items purchased:"))
+for i in range(1,n+1):
+    x=input("enter the item purchased")
+    y=int(input("enter price of the purchased item"))
+    if x in iteminstore:
+        purchased.add(x)
+        price.append(y)
+print("your purchased items are",purchased)
+print("your bill is",sum(price))
+print("the maximum price of the item purchased is", max(price))
+print("the minimum price of the item purchased is", min(price))
+
+
+#ques 5
+universal=set()
+for i in range(1,41):
+    universal.add(i)
+hockey=set()
+for j in range(1,22):
+    hockey.add(j)
+both=set()
+for k in range(11,22):
+    both.add(k)
+
+hockeyonly=hockey-both
+cricket=universal-hockeyonly
+cricketonly=cricket-both
+print("number of students playing cricket only are",len(cricketonly))
+
+#ques 6
+dog=set(range(1,3))|set(range(7,13))|set(range(24,49))|set(range(49,99))
+cat=set(range(3,7))|set(range(7,13))|set(range(24,49))|set(range(99,165))
+fish=set(range(1,3))|set(range(7,13))|set(range(3,7))|set(range(13,23))
+other=set(range(165,199))
+onlydog=dog-(cat|fish)
+onlycat=cat-(dog|fish)
+onlyfish=dog-(dog|cat)
+total=(((dog|cat)|fish)|other)
+print("the purchases for a dog product are:",len(onlydog))
+print("the purchases for a cat product are:",len(onlycat))
+print("the purchases for a fish product are:",len(onlyfish))
+print("the purchases for a dog or fish product are:",len(onlydog|onlyfish))
+print("the total purchases are:",len(total))
+
+#ques 7
+french=set(range(11))
+spanish=set(range(10))
+english=set(range(25))
+engandfrench=set(range(17))
+spanandfrench=set(range(9))
+engandspan=set(range(20))
+total=set(range(110))
+neither=set(range(10))
+print("students speaking english and spanish but not french are",len(engandspan))
+print("students speaking neither english,spanish nor french are",len(neither))
+print("students speaking french but not english and spanish",len(french))
+print("students speaking only one of the three",len(english)+len(french)+len(spanish))
+print("students speaking exactly 2 languages",len(engandspan)+len(engandfrench)+len(spanandfrench))
+
