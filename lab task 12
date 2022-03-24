@@ -1,0 +1,27 @@
+import random
+from random import sample
+dice1=[1,2,3,4,5,6]
+dice2=[1,2,3,4,5,6]
+for i in dice1:
+    x=random.randint(1,6)
+    print("player 1:",x)
+    y=random.randint(1,6)
+    print("player 2:",y)
+
+#ques 2
+students=['maham','sara','marium','shafaq','ahmed','ali','arham']
+selected=[]
+for i in students:
+    y=students.pop()
+    z=random.sample(students,2)
+print("the selected students are:")
+print(z)
+
+#ques 1
+cities=['karachi','islamabad','lahore','multan','rawalpindi','hyderabad','sialkot','sukkur']
+print("the original list is:")
+print(cities)
+x=random.shuffle(cities)
+print("after shuffling the list is:")
+print(cities)
+
