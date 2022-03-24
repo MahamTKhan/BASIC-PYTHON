@@ -1,0 +1,14 @@
+month=input("enter month:")
+day=int(input("enter day:"))
+if month in ('january','december') and ( day<=31):
+    print("the season as per the data entered is WINTER")
+elif month=='feburary' and day<=29:
+       print("the season as per the data entered is WINTER")
+elif month in ('march','april','may') and ( day<=31):
+    print("the season as per the data entered is SPRING")
+elif month in ('june','july','august') and ( day<=31):
+    print("the season as per the data entered is SUMMER")
+elif month in ('september','october','november') and  day<=31:
+    print("the season as per the data entered is AUTUMN ")
+else:
+    print("invalid input")
