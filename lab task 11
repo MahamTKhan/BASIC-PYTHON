@@ -1,0 +1,209 @@
+#prog 1
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006"}
+print("dict['name']",dict['name'])
+print("dict['age']",dict['age'])
+print("dict['DOB']",dict['DOB'])
+print("dict['class']",dict['class'])
+
+#prog 2
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006"}
+for x in dict:
+    print(dict[x])
+
+#prog 3
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006"}
+for x in dict.values():
+    print(x)
+
+#prog 4
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006"}
+for x,y in dict.items():
+    print(x,y)
+
+
+#prog 5
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006"}
+if "DOB" in dict:
+    print("Yes, DOB is one of the keys in the dict dictionary")
+
+
+#prog 6
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006"}
+dict['age']=12.5
+dict['school']="the seeds school"
+print("dict['age']",dict['age'])
+print("dict['school']",dict['school'])
+
+dict['friend1']='mohib'
+dict['friend2']='akbar'
+dict['friend3']='jazil'
+
+print("dict['friend1']",dict['friend1'])
+print("dict['friend2']",dict['friend2'])
+print("dict['friend3']",dict['friend3'])
+
+
+#prog 7
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006","school":"the seeds school",'friend1':"mohib","friend2":"akbar","friend3":"jazil"}
+for x,y in dict.items():
+    print(x,y)
+dict.pop("friend1")
+print(dict)
+
+
+#prog 8
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006"}
+dict['age']=12.5
+dict['school']="the seeds school"
+print("dict['age']",dict['age'])
+print("dict['school']",dict['school'])
+
+dict['friend1']='mohib'
+dict['friend2']='akbar'
+dict['friend3']='jazil'
+
+print("dict['friend1']",dict['friend1'])
+print("dict['friend2']",dict['friend2'])
+print("dict['friend3']",dict['friend3'])
+
+del dict["friend1"]
+
+#prog 9
+dict={"name":"jibran","class":6,"age":12,"DOB":"16 april 2006","school":"the seeds school",'friend1':"mohib","friend2":"akbar","friend3":"jazil"}
+for x,y in dict.items():
+    print(x,y)
+dict.popitem()
+print("after popping an item the remaining items are",dict)
+
+#prog 10
+faculty={1:{'name':"Asma khan","experience":21,"gender":"female"},
+         2:{'name':"dr raheela","experience":22,"gender":"female"},
+         3:{'name':"dr kashif","experience":22,"gender":"male"},
+         4:{'name':"dr wahab","experience":3,"gender":"male"},
+         5:{'name':"miss simrah","experience":19,"gender":"female"},
+         6:{'name':"miss shumaila","experience":15,"gender":"female"}}
+print(faculty)
+
+
+#question 1
+famdict={"father":"Tariq","mother":"amber","brother":"ammar","sister":"momal"}
+print(famdict)
+maternalside={"maternal grandparents":("sadiq","samiya"),
+              "maternal uncles":("sami","sohail","irshad"),
+              "maternal aunties":("nasreen","sameen")}
+
+paternalside={"paternal grandparents":("khan","surraiya"),
+              "paternal uncles":("arif","asim"),
+              "paternal aunties":("usfira","neelum")}
+famdict.update(maternalside)
+famdict.update(paternalside)
+for x,y in famdict.items():
+    print(x,":",y)
+#question 2
+def phonedirectory(k):
+    phonebook = {}
+    for x in range(k):
+        name=input("enter name:")
+        num=int(input("enter phone number:"))
+        phonebook[name]=num
+        print(phonebook)
+    return(phonebook)
+
+def delete(name):
+    p.pop(name)
+    return(p)
+a=int(input("enter number of contats you want to add:"))
+p=phonedirectory(a)
+question=input("do you want to delete?(y|n)").casefold()
+if question=="y":
+    delete(input("enter the contact name to be deleted"))
+    print("total number of contacts:",len(p))
+    print("the phone directory is")
+    for x,y in p.items():
+        print(x,":",y)
+
+#ques 4
+choices={"monday":"pasta","tuesday":"pizza","wednesday":"biryani","thursday":"steak","friday":"chowmein","saturday":"fries","sunday":"burger"}
+cooked={"fastfood":["burger","pizza","sandwiches"],
+        "desi":["biryani","nehari","karhai"],
+        "other":["vegetales","steak","noodles","icecream"]}
+dishesnextweek={}
+for i in choices.values():
+        for k in cooked.values():
+            if i==k:
+                print(i,"\n")
+                dishesnextweek=+i
+            else:
+                for j in k:
+                    if j==i:
+                        print(i,"\n")
+                    else:
+                        dishesnextweek=+1
+else:
+    h=choices.values()
+    for k in choices.values():
+        if h==k:
+            print(h,"\n")
+            dishesnextweek=+1
+        else:
+            for j in k:
+                print(h,"\n")
+                dishesnextweek=+1
+print("the dishes of my choices to be cooked nextweek are:",dishesnextweek)
+
+#ques 3
+def heASCII(l):
+    l=list(l)
+    print(l)
+    d={}
+    print("\n","correspondence between lower case characters and their hexadecimal representation:")
+    for i in l:
+        d[i]=(hex(ord(i)))
+    for x,y in d.items():
+        print(x,":",y)
+a="mah"
+print(heASCII(a))
+#ques 5
+def make_list(no_of_families):
+    l={}
+    lst=[]
+    for i in range(no_of_families):
+        print(" ")
+        a=input("enter family name:")
+        n=int(input("enter no of members:"))
+        for j in range(n):
+            lst.append(input("enter family members:"))
+        l[a]=lst
+        print(l)
+    return(l)
+    
+def common_guest(a,b):
+    num=0
+    lst=[]
+    for x,y in a.items():
+        for i,j in b.items():
+            if x==i:
+                for k in y:
+                    for l in j:
+                        if k==l:
+                            if k not in lst:
+                                lst.append(k)
+                                num+=1
+                            else:
+                                continue
+    print("members",lst,"\n","no of common members",num)
+    
+
+print(" parents list:")
+parentslist=make_list(1)
+print()
+
+print("my guests are:")
+myguest=make_list(1)
+
+print("parents list",parentslist,"\n","my guests list",myguest)
+print("\n","common guests:")
+
+common_guest(parentslist,myguest)
+
+
