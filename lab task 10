@@ -1,0 +1,53 @@
+import os
+#ques 1
+def stats(text):
+    file=open(text)
+    data = file.read()
+    words=data.split()
+    lines=data.split("\n")
+    #return stats
+    print("number of characters in a file",len(data))
+    print("number of words in a file", len(words))
+    print("number of lines in a file", len(lines))
+text=input("enter file name: ")
+stats(text)
+
+#ques 2
+def distribution(a):
+   file=open(grade)
+   data=file.read()
+   print(data)
+   word=[data.count("A"),data.count("B"),data.count("C"),data.count("F")]
+   return word
+grade=input("enter file name: ")
+print("students got A",distribution(grade)[0])
+print("students got B",distribution(grade)[1])
+print("students got C",distribution(grade)[2])
+print("students got F",distribution(grade)[3])
+
+#ques
+def duplicate(file):
+    data=file.read()
+    words=data.split()
+    for i in words:
+      if words.count(i)>1:
+          return(" True")
+      else:
+         return(" False")
+file=open("C:\DUP.txt","r")
+file1=open("C:\duplicate.txt","r")
+print("for DUP.txt:",duplicate(file))
+print("for duplicate.txt:",duplicate(file1))
+
+#ques 4
+def abc(file):
+    file=open(file)
+    content=file.read()
+    words=content.split()
+    for i in words:
+        if i==4:
+         repl=i.replace(i,"xxxx")
+         print(repl)
+    return()
+n=input("enter file path:")
+abc(n)
