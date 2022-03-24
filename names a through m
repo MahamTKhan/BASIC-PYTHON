@@ -1,0 +1,8 @@
+n = []
+y=int(input("enter range of the students"))
+for i in range(y):
+   X=input("enter name")
+   if X[0] in 'abcdefghijklmABCDEFGHIJKLM':
+       n.append(X)
+print("THE NAMES OF STUDENTS STARTING FROM 'A' THOROUGH 'M' ARE")
+print(n)
